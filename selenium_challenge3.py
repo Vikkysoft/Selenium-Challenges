@@ -1,3 +1,7 @@
+# Navigate any browser to https://weather.com/
+# get the current  temperature  and  print  it  out  in  the  terminal.
+# Then print out the temperature for Morning, Afternoon, Evening, and Overnight.
+
 import time
 from selenium import webdriver
 from selenium.webdriver import Keys

@@ -1,3 +1,7 @@
+# Using    the    firefox    browser    navigate    to https://www.google.com/
+# enter  the  text  Python  in  thesearch  box,  then  send  the  Enter  key.
+# Get  the  text  from  theWikipedia  brief  on  the  right  side  and  print  the  value  in  the console.
+
 import time
 from selenium import webdriver
 from selenium.webdriver import Keys
@@ -18,7 +22,7 @@ def main():
     action = ActionChains(driver)
     send_keys_to_element(driver.find_element(By.NAME, "q"), "Python", Keys.ENTER)
     time.sleep(2)
-    wikipedia_brief_text = driver.find_element(By.TAG_NAME, "h3")
+    wikipedia_brief_text = driver.find_element(By.XPATH, '//*[@id="kp-wp-tab-overview"]/div[1]/div/div/div/div/div/div/div[1]/div/div/div/span[1]')
     print("Wikipedia brief:", wikipedia_brief_text.text)
     time.sleep(5)
     driver.close()

@@ -1,3 +1,6 @@
+# Using    the    chrome    browser    navigate    to https://www.facebook.com/
+# Fill  in  the  email/phone  and password text box then click the Login Button.
+
 import time
 from selenium import webdriver
 from selenium.webdriver import Keys

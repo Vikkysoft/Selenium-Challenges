@@ -45,3 +45,15 @@ DevTools listening on ws://127.0.0.1:58206/devtools/browser/629ce509-ce2f-4d1c-9
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
 1668424548280	Marionette	INFO	Stopped listening on port 58217
 JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+1668876257687	geckodriver	INFO	Listening on 127.0.0.1:63480
+1668876260854	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63481" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ENGRSA~1\\AppData\\Local\\Temp\\rust_mozprofile104XdK"
+1668876266831	Marionette	INFO	Marionette enabled
+1668876266863	Marionette	INFO	Listening on port 63495
+Read port: 63495
+WebDriver BiDi listening on ws://127.0.0.1:63481
+Read port: 63495
+1668876268994	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ENGRSA~1\\AppData\\Local\\Temp\\rust_mozprofile104XdK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:63481/devtools/browser/a9a84b94-0642-46e7-a66b-c971ce46f364
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+1668876295906	Marionette	INFO	Stopped listening on port 63495
