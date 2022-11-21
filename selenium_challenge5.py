@@ -13,25 +13,21 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def scroll_by_offset(action, delta_y):
-    action.scroll_by_amount(0, delta_y).perform()
+def comment_is_visible(driver):
+    web_driver_wait = WebDriverWait(driver, 50)
+    web_driver_wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="count"]/yt-formatted-string/span[2]')))
+    comments = driver.find_elements(By.XPATH, '//*[@id="content-text"]')
+    for comment in comments:
+        comment_text = comment.find_element(By.ID, 'content-text')
+        print(comment_text.text)
+
+    time.sleep(10)
 
 
 def main():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver.get("https://www.youtube.com/watch?v=FOLeWdj9gXg")
-    action = ActionChains(driver)
     driver.maximize_window()
-
-    scroll_by_offset(action, 500)
-    web_driver_wait = WebDriverWait(driver, 50)
-    web_driver_wait.until(EC.visibility_of_element_located(By.TAG_NAME), "ytd-item-section-renderer")
-    comments = driver.find_element(By.TAG_NAME, "ytd-item-section-renderer")
-    for comment in comments:
-        comment_content = comment.find_element(By.ID, 'content-text')
-        print(comment_content.text)
-
-    time.sleep(10)
+    driver.get("https://www.youtube.com/watch?v=FOLeWdj9gXg")
 
 
 if __name__ == '__main__':
